@@ -7,3 +7,8 @@ require "user.lsp.mason"
 require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
 
+-- strip trailing whitespace on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})

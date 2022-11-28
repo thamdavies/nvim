@@ -61,7 +61,7 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
 
 
-	-- Cmp 
+	-- Cmp
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
   use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" } -- path completions
@@ -93,6 +93,26 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+
+  use {
+    'johnfrankmorgan/whitespace.nvim',
+    config = function ()
+      require('whitespace-nvim').setup({
+        -- configuration options and their defaults
+
+        -- `highlight` configures which highlight is used to display
+        -- trailing whitespace
+        highlight = 'DiffDelete',
+
+        -- `ignored_filetypes` configures which filetypes to ignore when
+        -- displaying trailing whitespace
+        ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help' },
+      })
+
+      -- remove trailing whitespace with a keybinding
+      vim.keymap.set('n', '<Leader>t', require('whitespace-nvim').trim)
+    end
+  }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
