@@ -59,8 +59,7 @@ return packer.startup(function(use)
 	use {"windwp/nvim-ts-autotag"}
 
 	-- Colorschemes
-  use { "catppuccin/nvim", as = "catppuccin" }
-
+  use {"EdenEast/nightfox.nvim"}
 
 	-- Cmp
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
