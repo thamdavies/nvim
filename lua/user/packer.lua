@@ -11,20 +11,15 @@ return require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine', config = function() vim.cmd('colorscheme rose-pine') end })
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use { "folke/which-key.nvim" }
+  use 'nvim-tree/nvim-web-devicons'
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
-    },
     config = function()
       require("nvim-tree").setup {}
     end
   }
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
+  use {'akinsho/bufferline.nvim', commit = "41660189da6951d14436147dff30ed7f0d12ed01" }
+  use { 'nvim-lualine/lualine.nvim', commit = "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" }
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -51,12 +46,6 @@ return require('packer').startup(function(use)
   use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
-  use({
-  "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup()
-    end
-})
   use 'lukoshkin/trailing-whitespace'
 end)
 
