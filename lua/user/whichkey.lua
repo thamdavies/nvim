@@ -94,15 +94,17 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  ["m"] = { "<cmd>lua require('peek').open()<cr>", "Markdown Preview" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   p = {
-    name = "Packer",
+    name = "Packer + ChatGPT",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
     s = { "<cmd>PackerSync<cr>", "Sync" },
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
+    a = { function() require("chatgpt").edit_with_instructions() end, "Ask bot" },
   },
 
   g = {
