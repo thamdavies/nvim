@@ -39,10 +39,9 @@ if executable('ag')
   " cnoreabbrev aG Ack
   " cnoreabbrev Ag Ack
   " cnoreabbrev AG Ack
-  nnoremap <Leader>fw :Ack!<Space>
 
   " Any empty ack search will search for the work the cursor is on
-  let g:ack_use_cword_for_empty_search = 1
+  " let g:ack_use_cword_for_empty_search = 1
 
   " Auto close the Quickfix list after pressing '<enter>' on a list item
   let g:ack_autoclose = 1
@@ -55,6 +54,8 @@ endif
 " -- Configurations --
 
 let mapleader = " "
+
+nnoremap <Leader>fw :Ack!<Space>
 
 " Clipboard
 set clipboard=unnamedplus
