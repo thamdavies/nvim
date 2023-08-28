@@ -11,3 +11,19 @@ sudo apt-get install silversearcher-ag
 ```
 4. Navigate to `~/.config.nvim/init.vim` directory, run this command to install the plugins `:PlugInstall`
 5. Enjoy your Vim ;))
+### Language server integration
+#### Rails integration
+1. Install solargraph by:
+```
+gem install solargraph solargraph-rails
+```
+In your vim/neovim, run command:
+```
+:CocInstall coc-solargraph
+```
+2. Config solargraph for Rails
+```bash
+ln -s ~/.config/nvim/ruby-ls/.solargraph.yml ~/.config/solargraph/.config.yml
+ln -s ~/.config/nvim/ruby-ls/definitions.rb <project directory>/config/definitions.rb # Don't forget to add this file to .gitignore
+```
+In your Project root run `yard gems`
