@@ -22,6 +22,7 @@ In your vim/neovim, run command:
 :CocInstall coc-solargraph
 ```
 2. Config solargraph for Rails (WIP)
+
 Please note that this configuration is optional, free to use without it.
 ```bash
 ln -s ~/.config/nvim/ruby-ls/.solargraph.yml ~/.config/solargraph/.config.yml
