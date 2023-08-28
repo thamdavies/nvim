@@ -25,6 +25,9 @@ In your vim/neovim, run command:
 Please note that this configuration is optional, free to use without it.
 ```bash
 ln -s ~/.config/nvim/ruby-ls/.solargraph.yml ~/.config/solargraph/.config.yml
-ln -s ~/.config/nvim/ruby-ls/definitions.rb <project directory>/config/definitions.rb # Don't forget to add this file to .gitignore
 ```
-In your Project root run `yard gems`
+Install a Ruby Documentation Tool (YARD) by:
+```
+gem install yard
+```
+In your Project root run `bundle exec yard gems`
