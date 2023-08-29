@@ -38,7 +38,7 @@ In your Project root run `bundle exec yard gems`
 |------------|-----------------------|
 | Space + ff | Find project files    |
 | Space + fw | Find words in project |
-| Space + b  | Toggle file explore   |
+| Space + g  | Toggle file explore   |
 | gd         | Go to definition      |
 | ...        | ...                   |
 
