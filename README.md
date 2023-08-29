@@ -32,3 +32,13 @@ Install a Ruby Documentation Tool (YARD) by:
 gem install yard
 ```
 In your Project root run `bundle exec yard gems`
+
+### Cheatsheets
+| Command    | Content               |
+|------------|-----------------------|
+| Space + ff | Find project files    |
+| Space + fw | Find words in project |
+| Space + b  | Toggle file explore   |
+| gd         | Go to definition      |
+| ...        | ...                   |
+Explore more mappings at `init.vim` file.
