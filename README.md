@@ -41,4 +41,5 @@ In your Project root run `bundle exec yard gems`
 | Space + b  | Toggle file explore   |
 | gd         | Go to definition      |
 | ...        | ...                   |
+
 Explore more mappings at `init.vim` file.
