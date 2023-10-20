@@ -46,7 +46,10 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
+  {
+    "github/copilot.vim",
+    event = "InsertEnter"
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
