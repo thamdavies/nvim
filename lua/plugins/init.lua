@@ -31,7 +31,7 @@ return {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
   -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
+  -- 			"lua", "ruby",
   --      "html", "css"
   -- 		},
   -- 	},
@@ -40,5 +40,10 @@ return {
   {
     "github/copilot.vim",
     event = "InsertEnter"
+  },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
   }
 }

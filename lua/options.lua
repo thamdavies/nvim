@@ -5,6 +5,8 @@ require "nvchad.options"
 -- Local
 local o = vim.o
 o.relativenumber = true
+o.swapfile = false
+o.backup = false
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
 -- Global

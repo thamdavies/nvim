@@ -22,6 +22,7 @@ require("lazy").setup({
     import = "nvchad.plugins",
     config = function()
       require "options"
+      require "configs.hardmode"
     end,
   },
 
